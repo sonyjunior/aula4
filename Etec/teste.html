@@ -1,0 +1,90 @@
+
+
+<!--***Cabeçalho e Roda pé ****-->
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Cabeçalho</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <h1>Main Content</h1>
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title>Footer</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>
+<!--******Layout Guias*****-->
+<ion-app>
+  <ion-tabs>
+    <ion-tab tab="home">
+      <h1>Home Content</h1>
+    </ion-tab>
+    <ion-tab tab="settings">
+      <h1>Settings Content</h1>
+    </ion-tab>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-label>Home</ion-label>
+        <ion-icon name="home"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="settings">
+        <ion-label>Settings</ion-label>
+        <ion-icon name="settings"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-app>
+
+<!--****Layout Menu*****-->
+<ion-app>
+  <ion-menu content-id="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-list-header>
+          Navigate
+        </ion-list-header>
+        <ion-menu-toggle auto-hide="false">
+          <ion-item button>
+            <ion-icon slot="start" name='home'></ion-icon>
+            <ion-label>
+              Home
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-page class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-toggle>
+            <ion-button>
+              <ion-icon slot="icon-only" name="menu"></ion-icon>
+            </ion-button>
+          </ion-menu-toggle>
+        </ion-buttons>
+        <ion-title>Header</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <h1>Main Content</h1>
+      <p>Click the icon in the top left to toggle the menu.</p>
+    </ion-content>
+  </ion-page>
+</ion-app>
+
+<ion-menu-controller></ion-menu-controller>
